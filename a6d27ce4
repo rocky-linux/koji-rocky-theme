@@ -2,6 +2,10 @@
 @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 /* 
   Koji styling
+
+  Authors:
+    Tommy Nguyen <remyabel@gmail.com>
+    Louis Abel <label@rockylinux.org>
 */
 
 html {
@@ -17,6 +21,7 @@ body {
     background: #fff repeat;
 }
 
+/* Adapted from account services */
 #mainNav {
     background-color #81c1ac;
     font-size: 12px;
@@ -95,6 +100,8 @@ a:hover, .btn-link {
 
 .text-info { color: #88d0ba; }
 .text-success { color: #8fbcad; }
+
+/* end adaptation */
 
 #wrap {
     min-width: 750px;
@@ -520,3 +527,4 @@ span#loginInfo {
 .error {
     color: red;
 }
+

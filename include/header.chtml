@@ -56,6 +56,17 @@ $localnav
             <input type="text" name="terms" title="You can use glob expressions here (e.g. 'bash-*')" value="$old_terms"/>
             <input class="btn btn-primary" type="submit" value="Search"/>
           </form>
+          <span id="loginInfo">
+            $koji.formatTimeLong($currentDate)
+            #if not $LoginDisabled
+             |
+            #if $currentUser
+            $greeting(), <a href="userinfo?userID=$currentUser.id">$currentUser.name</a> | <a href="logout">logout</a>
+            #else
+            <a href="login">login</a>
+            #end if
+            #end if
+          </span>
         </div><!-- end header -->
 
         <!-- MAIN NAVIGATION -->
@@ -75,17 +86,5 @@ $localnav
             <li class="btn btn-primary" id="apiTab"><a class="btn btn-primary" href="api">API</a></li>
           </ul>
         </div><!-- end mainNav -->
-
-        <span id="loginInfo">
-          $koji.formatTimeLong($currentDate)
-          #if not $LoginDisabled
-           |
-          #if $currentUser
-          $greeting(), <a href="userinfo?userID=$currentUser.id">$currentUser.name</a> | <a href="logout">logout</a>
-          #else
-          <a href="login">login</a>
-          #end if
-          #end if
-        </span>
 
         <div id="content">
